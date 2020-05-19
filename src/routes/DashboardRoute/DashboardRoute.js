@@ -9,8 +9,8 @@ class DashboardRoute extends Component {
   static contextType=UserContext;
   
   state={
-    language: {},
-    words: [],
+    language: {name: 'Esperanto'},
+    words: [{original: 'English'}],
   }
 
   componentDidMount(){
@@ -68,18 +68,18 @@ class DashboardRoute extends Component {
       <section className="dashboard">
       <div>
       <h2>{this.state.language.name}</h2>
-      <p>Total Score: {this.state.language.total_score}</p>
+      <p>Total correct answers: {this.state.language.total_score}</p>
       </div>
       <ul>
-      {this.state.words.map(word=>
+      {this.state.words.map(word=>{ return(
       <li>
-      <h4>{this.state.word.original}</h4>
+      <h4>{word.original}</h4>
       <div>
-      <p>correct answer count: {this.state.word.correct_count}</p>
-      <p>incorrect answer count: {this.state.word.incorrect_count}</p>
+      <p>correct answer count: {word.correct_count}</p>
+      <p>incorrect answer count: {word.incorrect_count}</p>
       </div>
       </li>
-        )}
+      )})}
       </ul>
       <div>
       <Button className="learning" onClick={this.beginLearning}>Start Learning</Button>
