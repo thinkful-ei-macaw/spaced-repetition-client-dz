@@ -1,6 +1,6 @@
-.nav{
+nav{
     position: fixed;
     top:0;
     left: 35%;
-    
+    border: 6px solid red;
 }
