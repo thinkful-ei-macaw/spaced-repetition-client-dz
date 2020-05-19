@@ -42,7 +42,7 @@ class Header extends Component {
     return (
       <header>
         <h1>
-          <Link to='/'>
+          <Link className="home" to='/'>
             Spaced repetition
           </Link>
         </h1>
