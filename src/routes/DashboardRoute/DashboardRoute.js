@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
- import Button from '../../components/Button/Button'
+import Button from '../../components/Button/Button'
 
 class DashboardRoute extends Component {
   
