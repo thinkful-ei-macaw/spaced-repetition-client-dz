@@ -63,7 +63,7 @@ class DashboardRoute extends Component {
   }
    
   render() {
-    const{language,words}=this.state;
+    // const {language,words}=this.state;
     return (
       <section className="dashboard">
       <div>
