@@ -23,7 +23,6 @@
     "predeploy": "npm run build",
     "deploy": "vercel --prod",
     "postdeploy": "now alias -A ./build/now.json"
-
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,7 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "cypress": "^3.2.0",
+    "cypress": "^3.8.3",
     "jsonwebtoken": "^8.5.0",
     "unfetch": "^4.1.0"
   }
