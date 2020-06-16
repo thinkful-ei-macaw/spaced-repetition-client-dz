@@ -43,10 +43,10 @@ class LearningRoute extends Component {
       <section>
         <h2>{this.state.language.total_score}</h2>
         <h2>Translate the word:{this.state.nextWord}</h2>
-        <span>Testnextword</span>
-        <p>Your total score is: 999</p>
-        <main>You have answered this word correctly 222 times.</main>
-        <main>You have answered this word incorrectly 333 times.</main>
+        <span></span>
+        <p>Your total score is: {this.state.totalScore}</p>
+        <main>You have answered this word correctly:{this.state.correct_count} times</main>
+        <main>You have answered this word incorrectly 333 times:{this.state.incorrect_count}</main>
         <form>
           <label htmlFor="learn-guess-input">What's the translation for this word?</label>
           <input id="learn-guess-input" name="learn-guess-input" onClick={this.handleGuess} type="text" required></input>
