@@ -8,8 +8,6 @@ import './setup-icons'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
 
-console.log(process.env)
-
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
