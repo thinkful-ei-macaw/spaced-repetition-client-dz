@@ -36,27 +36,6 @@ class DashboardRoute extends Component {
   }
 
  
-
-  // DisplayListWords(props){
-  //   return(
-  //     <li>
-  //     <h4>{props.word.original}</h4>
-  //     <div>
-  //     <p>correct answer count: {props.word.correct_count}</p>
-  //     <p>incorrect answer count: {props.word.incorrect_count}</p>
-  //     </div>
-  //     </li>
-  //   )
-  // }
-
-  // listWords(words){
-  //   let list=[];
-  //   words.forEach((original,translation)=>{
-  //     list.push(<DisplayListWords key={original} value={translation}/>);
-  //   })
-  //   return <li>{list}</li>
-
-  // }
   
   beginLearning=e=>{
     e.preventDefault();

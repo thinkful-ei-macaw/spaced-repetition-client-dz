@@ -1,7 +1,18 @@
 
 .languageName{
     text-align: center;
-} 
+
+}  
 .buttonDiv{
     text-align: center;
+    margin-top: 3%;
 }
+.dashBoard ul{
+    list-style: none;
+    text-align: center;
+    padding-right: 2.5%;
+}
+.dashBoard p{
+    text-align: center;
+    padding-right: 2.5%;
+} 
