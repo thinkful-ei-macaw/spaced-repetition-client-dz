@@ -4,7 +4,7 @@
     margin: 10%;
     padding: 8%;
     border-radius: 5px;
-    display: grid;
+    
 }
 
 label {
@@ -15,7 +15,7 @@ input {
     padding: 10px;
     margin: 10px auto;
     text-align: center;
-    background-color: rgb(208, 215, 226);
+    background-color: white;
     
 }
 

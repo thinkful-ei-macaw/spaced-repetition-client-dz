@@ -1,6 +1,25 @@
-nav{
-    position: fixed;
-    top:0;
-    left: 35%;
-    border: 6px solid red;
+
+nav {
+  position: fixed; 
+  top: 0;
+  left: 35%;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.home {
+  color: rgb(101, 41, 150);
+  text-decoration: none;
+  text-align: center;
+}
+
+.head {
+  text-align: center;
+  padding-top:5%;
+
+} 
+
+.displayUser{
+  text-align: center;
 }

@@ -3,6 +3,7 @@ import config from '../../config'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../../components/Button/Button'
+import './DashboardRoute.css'
 
 class DashboardRoute extends Component {
   
@@ -65,8 +66,9 @@ class DashboardRoute extends Component {
   render() {
     // const {language,words}=this.state;
     return (
-      <section className="dashboard">
-      <div>
+      <section className="login">
+      <div className="dashBoard">
+      <div className="languageName">
       <h2>{this.state.language.name}</h2>
       <p>Total correct answers: {this.state.language.total_score}</p>
       </div>
@@ -81,8 +83,9 @@ class DashboardRoute extends Component {
       </li>
       )})}
       </ul>
-      <div>
-      <Button className="learning" onClick={this.beginLearning}>Start Learning</Button>
+      <div className="buttonDiv">
+      <Button className="myButton" onClick={this.beginLearning}>Start Learning</Button>
+      </div>
       </div>
       </section>
     );

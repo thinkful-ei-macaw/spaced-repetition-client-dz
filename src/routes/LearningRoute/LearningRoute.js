@@ -4,6 +4,7 @@ import config from '../../config'
 import TokenService from '../../services/token-service'
 import Button from '../../components/Button/Button'
 import { Input, Label } from '../../components/Form/Form';
+import './LearningRoute.css'
 
 
 class LearningRoute extends Component {
@@ -103,14 +104,14 @@ class LearningRoute extends Component {
     };
     return (
 
-      <section className="learn-section">
-           <main>
-        <div className="DisplayScore"><p className='total'>{`Your total score is: ${this.state.total}`}</p></div>
+      <section className="login">
+           <main className="learningSection">
+        <div className="displayScore"><p className='total'>{`Your total score is: ${this.state.total}`}</p></div>
         <div className="check-input">
           {!this.state.answer ? (
-            <>
+            <section className="translation">
             <h2 className="translate">Translate the word:</h2>
-            <span className="next-word">{this.state.head}</span></>
+            <span className="next-word">{this.state.head}</span></section>
             )
             : (
             <div className="DisplayFeedback">
@@ -119,28 +120,7 @@ class LearningRoute extends Component {
           )}
         </div>
 
-      {!this.state.answer ? (
-        <form className="word-guess-form" onSubmit={e => this.handleSubmit(e)}>
-          <Label 
-            htmlFor="learn-guess-input"
-            className="learn-guess-label"
-          >
-            What's the translation for this word? 
-          </Label> 
-          <Input 
-            id="learn-guess-input"
-            type="text"
-            value={this.state.guess}
-            onChange={e => this.handleInput(e)}
-            name="question"
-            required
-          />
-          <Button className="submit-btn" type="submit">Submit</Button>   
-        </form>
-        
-        ) : (
-          <Button className="next-btn" onClick={this.handleNext}>Next Word</Button>
-        )}
+    
          
         {!this.state.answer ? (
           <div>
@@ -154,6 +134,28 @@ class LearningRoute extends Component {
         ) : (
           <p className="message">Keep on keeping on!</p>
         )}
+        {!this.state.answer ? (
+          <form className="word-guess-form" onSubmit={e => this.handleSubmit(e)}>
+            <Label 
+              htmlFor="learn-guess-input"
+              className="learn-guess-label"
+            >
+              What's the translation for this word? 
+            </Label> 
+            <Input 
+              id="learn-guess-input"
+              type="text"
+              value={this.state.guess}
+              onChange={e => this.handleInput(e)}
+              name="question"
+              required
+            />
+            <Button className="myButton" type="submit">Submit</Button>   
+          </form>
+          
+          ) : (
+            <Button className="next-btn" onClick={this.handleNext}>Next Word</Button>
+          )}
       </main>
       </section>
     );
