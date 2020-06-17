@@ -14,11 +14,13 @@ class Header extends Component {
   renderLogoutLink() {
     return (
       <div>
+        <section className="displayUser">
         <span>
           {this.context.user.name}
         </span>
+        </section>
         <nav>
-          <Link
+          <Link className="navLink"
             onClick={this.handleLogoutClick}
             to='/login'>
             Logout
@@ -41,9 +43,9 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <h1>
+        <h1 className="head">
           <Link className="home" to='/'>
-            Spaced repetition
+            Spaced Repetition
           </Link>
         </h1>
         {TokenService.hasAuthToken()
